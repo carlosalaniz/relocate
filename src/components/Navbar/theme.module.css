@@ -1,0 +1,52 @@
+.container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Visby Round CF';
+  font-weight: 800;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: -1px;
+  background: #fff;
+  font-size: 1.01rem;
+}
+
+.left {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.brand > img {
+  height: 36px;
+  display: flex;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(20px, 1fr);
+  gap: 0.5rem;
+}
+
+.user > img {
+  height: 32px;
+}
+
+.username {
+  display: grid;
+  align-items: center;
+}

@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-Bold.woff2') format('woff2'),
+    url('VisbyRoundCF-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-ExtraBold.woff2') format('woff2'),
+    url('VisbyRoundCF-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-ExtraLight.woff2') format('woff2'),
+    url('VisbyRoundCF-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-Regular.woff2') format('woff2'),
+    url('VisbyRoundCF-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-DemiBold.woff2') format('woff2'),
+    url('VisbyRoundCF-DemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-Medium.woff2') format('woff2'),
+    url('VisbyRoundCF-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-Light.woff2') format('woff2'),
+    url('VisbyRoundCF-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visby Round CF';
+  src: url('VisbyRoundCF-Heavy.woff2') format('woff2'),
+    url('VisbyRoundCF-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}

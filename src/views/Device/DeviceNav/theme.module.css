@@ -1,0 +1,37 @@
+.container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tablink {
+  color: #8e8e8e;
+  font-weight: 700;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.activeTabLink {
+  color: #8e8e8e;
+  font-weight: 700;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.05);
+  color: #333333;
+  transition: all ease 0.3s;
+}

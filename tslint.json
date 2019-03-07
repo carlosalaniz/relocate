@@ -1,0 +1,19 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:recommended"
+	],
+	"jsRules": {
+		"indent": [true, "tabs", 2],
+		"quotemark": [true, "single"],
+		"no-console": [true, "log", "error"],
+		"semicolon": false,
+	},
+	"rules": {
+		"indent": [true, "tabs", 2],
+		"quotemark": [true, "single"],
+		"no-console": [true, "log", "error"],
+		"semicolon": false,
+	},
+	"rulesDirectory": []
+}

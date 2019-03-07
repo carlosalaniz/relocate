@@ -1,0 +1,30 @@
+.container {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+
+.header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  padding-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.fields {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.description {
+  line-height: 1.7rem;
+  padding: 1.5rem 0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 120px 120px;
+  justify-content: end;
+  grid-gap: 1rem;
+}

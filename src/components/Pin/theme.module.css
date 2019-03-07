@@ -1,0 +1,57 @@
+.avatar {
+  width: 45px;
+  transform: rotate(45deg);
+}
+
+.pin {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0;
+  background: #fff;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 100%;
+  margin: -60px 0 0 -27px;
+  border: 3px solid #fff;
+}
+
+.pulse {
+  animation: pulseEffect 1.5s infinite linear;
+  border: 3px solid #fff;
+  height: 20px;
+  width: 20px;
+  background-color: #1e90ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 22px 0px 0px -1px;
+  z-index: -2;
+  border: 3px solid #fff;
+}
+
+.wave {
+  height: 20px;
+  width: 20px;
+  background-color: #1e90ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin: 22px 0px 0px -1px;
+  z-index: -1;
+}
+@keyframes pulseEffect {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}

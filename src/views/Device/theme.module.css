@@ -1,0 +1,25 @@
+.portada {
+  background: #141720;
+  height: 300px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  color: #fff;
+}
+
+.avatar {
+  width: 70px;
+}
+
+.name {
+  font-weight: 700;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.id {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}

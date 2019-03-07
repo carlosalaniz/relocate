@@ -1,0 +1,18 @@
+.navlink {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem;
+  border-radius: 20px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.navlink:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  color: #333;
+}
+
+.activeNavlink {
+  color: #333;
+}

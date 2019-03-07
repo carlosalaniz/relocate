@@ -1,0 +1,35 @@
+.input[type='password'] {
+  font-family: caption;
+}
+
+.input::placeholder {
+  font-family: 'Visby Round CF', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.input {
+  height: 54px;
+  border: none;
+  background: rgba(0, 0, 0, 0.06);
+  font-size: 1rem;
+  padding-left: 2rem;
+  font-weight: 700;
+  font-family: 'Visby Round CF', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.input:focus {
+  outline: none;
+  background: #fff;
+  border: 1px solid #333;
+}
+
+.inputGroup {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 70px minmax(200px, 1fr);
+}
+
+.label {
+  display: grid;
+  align-items: center;
+  font-weight: 600;
+}
