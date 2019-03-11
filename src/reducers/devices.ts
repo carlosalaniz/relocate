@@ -2,11 +2,14 @@ import { DevicesState } from '../common/types'
 import { DEVICE } from '../common/constants'
 
 const initialState: DevicesState = {
-  data: []
+  data: [],
+  loading: true
 }
 
 const devices = (state = initialState, action: any) => {
   switch (action.type) {
+    case DEVICE.GET_ALL:
+      return { ...state, loading: true }
     case DEVICE.CREATE_SUCCESS:
       return { ...state, data: state.data.concat(action.payload) }
     case DEVICE.POSITION_UPDATE: {
@@ -27,7 +30,7 @@ const devices = (state = initialState, action: any) => {
       }
     }
     case DEVICE.GET_ALL_SUCCESS:
-      return { ...state, data: action.payload }
+      return { ...state, data: action.payload, loading: false }
     default:
       return state
   }

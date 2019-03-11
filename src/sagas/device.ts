@@ -1,6 +1,6 @@
 import { takeEvery, call, put } from 'redux-saga/effects'
 import { DEVICE } from '../common/constants'
-import { DeviceParams, Device, IDParam } from '../common/types'
+import { DeviceParams, IDParam } from '../common/types'
 import { createDevice, getAllDevices, deleteDevice } from '../connectivity'
 import store from '../store'
 import {

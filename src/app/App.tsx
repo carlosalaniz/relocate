@@ -1,32 +1,25 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { UserState } from '../common/types'
-import { Navbar } from '../components'
+import { UserState, DevicesState } from '../common/types'
 import { Signin } from '../views'
-import { Map, Devices, Vehicles, Device } from '../views'
+import { Loader } from '../components'
+import Authenticated from './Authenticated'
 
 interface AppProps {
   user: UserState
-  getAllDevices: () => any
+  devices: DevicesState
+  getAllDevices: () => void
 }
 
 const App: React.SFC<AppProps> = props => {
-  const logged = props.user.logged
-  useEffect(() => {
-    props.getAllDevices()
-  }, [])
+  const logged = props.user.logged || !!localStorage.getItem('user')
+  const userLoading = props.user.loading
   return (
     <>
       {logged ? (
-        <div>
-          <Navbar />
-          <Switch>
-            <Route path="/device/:id" component={Device} />
-            <Route path="/devices" component={Devices} />
-            <Route path="/vehicles" component={Vehicles} />
-            <Route path="/" component={Map} exact />
-          </Switch>
-        </div>
+        <Authenticated {...props} />
+      ) : userLoading ? (
+        <Loader />
       ) : (
         <div>
           <Switch>

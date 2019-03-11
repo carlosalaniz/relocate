@@ -18,3 +18,9 @@ export const signinUserFailed = (data: string) => {
     payload: data
   }
 }
+
+export function signoutUser() {
+  return {
+    type: USER.SIGNOUT
+  }
+}

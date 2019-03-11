@@ -1,44 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# relocate
 
-## Available Scripts
+Servicio de rastreo en tiempo real.
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+El presente proyecto la interfaz de usuario para gestionar la posicipon en tiempo real de determinados dispositivos. EL sistema aun esta en desarrollo y es con propositos demostrativos.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Diseño de la aplicación
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Para la primera fase de la aplicación se ha diseñado una arquitectura muy sencilla. A continuación se presentan los requisitos que se tendrá que satisfacer:
 
-### `npm test`
+1. Multiples dispositivos envían su posición a un servidor
+2. El servidor almacena los datos una base de datos y a la vez emite esta posición a un cliente.
+3. El cliente muestra los datos en una interfaz de usuario
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![System Design](./images/archi.png)
 
-### `npm run build`
+## Tecnologias usadas
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para satisfacer los requisitos anteriores, se ha elegido las siguientes tecnologías.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- <b>Typescript: </b>TypeScript agrega tipos opcionales a JavaScript que admiten herramientas para aplicaciones de JavaScript a gran escala para cualquier navegador, para cualquier host, en cualquier sistema operativo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- <b>ReactJS: </b> Libraria javascript para crear interfaces de usuario basada en componentes.
 
-### `npm run eject`
+- <b>Redux: </b> Libreria javascript para manejar el estado de las aplicaciones.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Arrancando el proyecto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Manual
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Se necesita tener instalado [Node.js](https://nodejs.org) y [git](https://git-scm.com/) para poder empezar. Como gestor de paquetes se utilizará `yarn`, por cuestiones de rendimiento (Se puede utilizar indistintivamente `yarn` y `npm`).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Installation
 
-## Learn More
+```sh
+# Clonar el repositorio
+git clone https://github.com/xorb/relocate.git relocate
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Cambiar directorio de trabajo
+cd relocate
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Instalacion de dependencias
+yarn install
+```
+
+### Variables de entorno
+
+Es necesario algunos datos para poder iniciar la aplicación. Copiar el archivo indicado y llenar los datos que se solicita.
+
+```sh
+cp example.env .env
+```
+
+### Arrancando
+
+```sh
+# En modo de desarrollo
+yarn run dev
+```
+
+## Docker
+
+Se necesita tener [Docker](https://www.docker.com/community-edition) instalado
+
+### Run server
+
+```sh
+# Descargar la imagen del registro de contenedores
+docker pull xorb/relocate:1.0.0
+# Arrancar la imagen
+docker run -it -p 8000:5000 relocate:1.0.0
+```
+
+## Tests
+
+Se han realizado los tests unitarios para agilizar el desarrollo y evitar errores.
+
+```sh
+# Dentro del directorio ejecutar el siguiente comando
+yarn test
+```
+
+## Guia de uso
+
+Primero, el usuario tiene que iniciar sesion en el sistema con los datos adecuados(nomber de usuario y contraseña).
+<br/><br/>
+![Login](./images/login.png)
+<br/><br/>
+Una vez iniciada sesión, se muestra la primara vista el cual no contiene muchos datos.
+<br/><br/>
+![Empy Map](./images/mapEmpty.png)
+<br/><br/>
+Luego, para ver la aplicacion en funcionamiento, se tiene que añadir dispositivos gps, para lo cual movemos el cursor a la pestaña <b>devices</b>. Y como en primera instancia no se tienen dispositivos registrados, se muestra una ventana limpia.
+<br/><br/>
+![Empty devices](./images/devicesEmpty.png)
+<br/><br/>
+Para agregar nuevos dispoistivos, hacemos click en la opcion <b>Add</b> que nos permitira agregar algunos dispositivos.
+<br/><br/>
+![Create Device](./images/createDevice.png)
+
+Luego podremos verificar inmediatamente que los dispositivos se hayan agregado
+<br/><br/>
+![Devices Added](./images/devicesAdded.png)
+
+De la lista, seleccionamos un dispositivo para poder ver su informacion general
+<br/><br/>
+![Devices View](./images/deviceView.png)
+
+A continuacion nos dirigimos a la vista principal de la aplicación para ver a los dispoisitivos agregados en el mapa.
+<br/><br/>
+![Map Added](./images/mapAdded.png)
+
+## Author
+
+Created and maintained by Dany Boza ([@xorbmoon](https://twitter.com/xorbmoon)).

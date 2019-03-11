@@ -1,0 +1,15 @@
+.container {
+  height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.signout {
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.061);
+  cursor: pointer;
+}

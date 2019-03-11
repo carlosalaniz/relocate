@@ -18,10 +18,10 @@ const InfoBox: React.SFC<InfoBoxProps> = props => {
       </div>
       <div className={styles.body}>
         <div className={styles.data}>
-          <span>Lat: </span> {props.position.lat}
+          <span>LAT</span> {props.position.lat}
         </div>
         <div className={styles.data}>
-          <span>Lng: </span> {props.position.lng}
+          <span>LNG</span> {props.position.lng}
         </div>
       </div>
     </div>

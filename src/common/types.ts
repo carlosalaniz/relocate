@@ -18,12 +18,14 @@ export interface ApplicationState {
 
 export interface DevicesState {
   data: Device[]
+  loading?: boolean
 }
 
 export interface UserState {
   logged: boolean
   error?: string
   profile?: Profile
+  loading?: boolean
 }
 
 export interface Profile {

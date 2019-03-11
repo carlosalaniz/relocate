@@ -1,4 +1,3 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators, Dispatch } from 'redux'
 import AppComponent from './App'
@@ -10,7 +9,8 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 }
 
 const mapStateToProps = (state: ApplicationState) => ({
-  user: state.user
+  user: state.user,
+  devices: state.devices
 })
 
 export default connect(
