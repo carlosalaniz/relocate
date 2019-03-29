@@ -1,0 +1,35 @@
+.item {
+  height: 80px;
+  display: flex;
+  padding: 0 1.2rem;
+  cursor: pointer;
+}
+.item:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.item > div > img {
+  height: 44px;
+}
+
+.itemAvatar {
+  display: flex;
+  align-items: center;
+}
+.itemDescription {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.itemName {
+  font-weight: 700;
+}
+
+.itemId {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.96rem;
+  padding-top: 0.06rem;
+}

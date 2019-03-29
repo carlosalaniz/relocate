@@ -2,8 +2,8 @@ export interface Device {
   id: string
   name: string
   linked?: boolean
-  avatar?: string
-  position?: google.maps.LatLngLiteral
+  avatar: string
+  position: google.maps.LatLngLiteral
 }
 
 export interface DeviceParams {

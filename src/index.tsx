@@ -12,7 +12,7 @@ import './index.css'
 import './assets/font/styles.css'
 
 setupSocket(store.dispatch)
-
+console.log(process.env)
 ReactDOM.render(
   <Provider store={store}>
     <GoogleMapProvider>

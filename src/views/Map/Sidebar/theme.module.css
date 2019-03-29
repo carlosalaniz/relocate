@@ -1,0 +1,19 @@
+.container {
+  width: 280px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  background: #fff;
+  height: calc(100% - 30px);
+}
+
+.header {
+  background: #f4d03f;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.09rem;
+}
