@@ -19,7 +19,6 @@ const Navbar = () => {
           Home
         </Navlink>
         <Navlink to="/devices">Devices</Navlink>
-        <Navlink to="/vehicles">Vehicles</Navlink>
       </div>
       <div className={styles.right}>
         <Navlink to="/me">

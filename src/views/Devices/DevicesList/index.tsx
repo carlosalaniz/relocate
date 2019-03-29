@@ -5,7 +5,7 @@ import { DeviceItem } from '../../../components'
 
 interface IProps {
   devices: Device[]
-  tabStatus: string
+  openModal: () => void
 }
 const Posed = posed.div({
   transition: {
@@ -15,7 +15,7 @@ const Posed = posed.div({
 })
 
 const Devices: React.SFC<IProps> = props => {
-  if (props.devices.length === 0 && props.tabStatus === 'all') {
+  if (props.devices.length === 0) {
     return (
       <div className="listdevices__empty">
         <div className="listdevices__empty-content">
@@ -26,6 +26,9 @@ const Devices: React.SFC<IProps> = props => {
   }
   return (
     <div className="listdevices">
+      <div onClick={() => props.openModal()} className="add-device-box">
+        +
+      </div>
       <PoseGroup>
         {props.devices.map((device: Device) => (
           <Posed key={device.id}>
