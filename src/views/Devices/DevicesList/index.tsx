@@ -18,8 +18,11 @@ const Devices: React.SFC<IProps> = props => {
   if (props.devices.length === 0) {
     return (
       <div className="listdevices__empty">
-        <div className="listdevices__empty-content">
-          No items found. Click on add to add new elements.
+        <div
+          onClick={() => props.openModal()}
+          className="listdevices__empty-content"
+        >
+          No items found. Click here to add new elements.
         </div>
       </div>
     )

@@ -1,4 +1,4 @@
-export const API_URI = 'https://www.api.relocate.ml'
+export const API_URI = 'https://trackerapi.lapscorp.ml'
 
 export const PE_LATLNG: google.maps.LatLngLiteral = {
   lat: -11.97912,
